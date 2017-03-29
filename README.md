@@ -12,3 +12,7 @@ Filter codepoint from raw database
 		-v toggleValues="$toggleValues" \
 	   src/Unihan_Readings.txt \
 	> src/codepoint-ruby.tsv
+
+Generate JSON file
+
+	yarn start

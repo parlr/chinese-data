@@ -1,6 +1,8 @@
+[![Build Status](https://travis-ci.org/parlr/chinese-data.svg?branch=master)](https://travis-ci.org/parlr/chinese-data)
+
 # chinese-data
 
-Extract data from unihan
+> Extract data from Unihan database as JSON
 
 ## Usage
 

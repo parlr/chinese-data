@@ -1,18 +1,22 @@
 [
   {
-    "glyph": "西",
-    "phonetic": "xī"
+    "codepoint": "U+3400",
+    "ruby": "qiū",
+    "glyph": "㐀"
   },
   {
-    "glyph": "中",
-    "phonetic": "zong1"
+    "codepoint": "U+3401",
+    "ruby": "tiàn",
+    "glyph": "㐁"
   },
   {
-    "glyph": "火",
-    "phonetic": "huǒ"
+    "codepoint": "U+3404",
+    "ruby": "kuà",
+    "glyph": "㐄"
   },
   {
-    "glyph": "山",
-    "phonetic": "shān"
+    "codepoint": "U+3405",
+    "ruby": "wǔ",
+    "glyph": "㐅"
   }
 ]

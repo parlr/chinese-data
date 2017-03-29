@@ -6,10 +6,10 @@ import dataminer from "../src/dataminer";
 
 test("should save data to JSON file", async t => {
   const data = [
-    { glyph: "西", phonetic: "xī" },
-    { glyph: "中", phonetic: "zong1" },
-    { glyph: "火", phonetic: "huǒ" },
-    { glyph: "山", phonetic: "shān" }
+    { codepoint: "U+3400", ruby: "qiū", glyph: "㐀" },
+    { codepoint: "U+3401", ruby: "tiàn", glyph: "㐁" },
+    { codepoint: "U+3404", ruby: "kuà", glyph: "㐄" },
+    { codepoint: "U+3405", ruby: "wǔ", glyph: "㐅" }
   ];
 
   const filepath = "./test/data.json";
@@ -29,4 +29,12 @@ test("convertToJson()", t => {
   });
   t.true(data.length > 0);
   t.is(data[0].codepoint, "U+3400");
+});
+
+test("getGlyph()", t => {
+  const line = "U+9FC3\tshǎn";
+
+  const glyph = dataminer.getGlyph(line, { separator: "\t" });
+
+  t.deepEqual(glyph, { codepoint: "U+9FC3", ruby: "shǎn", glyph: "鿃" });
 });

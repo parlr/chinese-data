@@ -6,5 +6,9 @@ Extract data from unihan
 
 Filter codepoint from raw database
 
-	awk '/U+/ && /kMandarin/{print $1"\t"$3}' src/Unihan_Readings.txt > src/codepoint-ruby.tsv
-	./node_modules/.bin/csv2json --tsv ./src/codepoint-ruby.{tsv,json}
+	toggleValues="U+4E00,U+9FFF,U+3400,U+4DBF,U+20000,U+2A6DF,U+2A700,U+2B73F,U+2B740,U+2B81F,U+2B820,U+2CEAF,U+F900,U+FAFF"
+	awk \
+		-f src/chinese.awk \
+		-v toggleValues="$toggleValues" \
+	   src/Unihan_Readings.txt \
+	> src/codepoint-ruby.tsv

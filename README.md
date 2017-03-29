@@ -16,3 +16,5 @@ Filter codepoint from raw database
 Generate JSON file
 
 	yarn start
+	# copy to ruby-font-creator directory
+	cp src/codepoint-ruby.json ../src/data.json
